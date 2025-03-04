@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="icon"
+      href="./src/assets/Logo-16x16.png"
+      sizes="16x16"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="./src/assets/Logo-32x32.png"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="./src/assets/Logo-64x64.png"
+      sizes="64x64"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="./src/assets/Logo-180x180.png"
+      sizes="180x180"
+      type="image/png"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ewland</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script
+      type="module"
+      src="./public//js/finisher-header.es5.min.js"
+    ></script>
+    <script>
+      const canvas = document.getElementById("finisher-canvas");
+      if (canvas) {
+        canvas.remove();
+      }
+    </script>
+  </body>
+</html>
