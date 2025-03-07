@@ -1,31 +1,20 @@
 // InfoBox.js
 import React from "react";
-import {
-  map,
-  location,
-  airport,
-  port,
-  AgricultureZone,
-  IndustrialZone,
-  PowePlant,
-} from "../assets";
+import { Railway, Roads, WaterWays, Borders } from "../assets";
 
 const Legendsbox = () => {
   // Array of icon and name pairs
   const icons = [
-    { icon: map, name: "Map" },
-    { icon: location, name: "Location" },
-    { icon: airport, name: "Airport" },
-    { icon: port, name: "Port" },
-    { icon: AgricultureZone, name: "Agriculture Zone" },
-    { icon: IndustrialZone, name: "Industrial Zone" },
-    { icon: PowePlant, name: "Power Plant" },
+    { icon: Railway, name: "RailwayLines" },
+    { icon: Roads, name: "Roads" },
+    { icon: WaterWays, name: "WaterWays" },
+    { icon: Borders, name: "Borders" },
   ];
 
   return (
-    <div className="w-96 m-2 h-[300px] bg-white my-4 shadow-md rounded-lg p-4 border border-gray-300 overflow-y-auto">
+    <div className="Side-bar w-80 overflow-x-hidden overflow-y-auto  m-2 max-h-[500px] bg-white my-4 shadow-md rounded-lg p-4 border border-gray-300 ">
       {/* Grid container with 3 columns */}
-      <div className="grid grid-cols-3 gap-4">
+      <div className="">
         {/* Map through the icons array and render each icon with its name */}
         {icons.map((item, index) => (
           <div key={index} className="flex items-center">

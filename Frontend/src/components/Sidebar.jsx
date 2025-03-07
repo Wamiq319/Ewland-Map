@@ -2,17 +2,26 @@ import React from "react";
 
 const Sidebar = ({ setSelectedIcon, icons, selectedIcon }) => {
   return (
-    <div className="sidebar   h-[400px] m-2 bg-gray-800 text-white p-1 rounded-md shadow-lg">
-      <div className="flex flex-col  mt-4">
-        {icons.map((icon, index) => (
+    <div className="Side-bar w-96  m-2 h-[300px] bg-white  shadow-md rounded-lg p-2 border border-gray-300   overflow-x-hidden ">
+      <div className="grid grid-cols-3 gap-1">
+        {icons.map((item, index) => (
           <button
             key={index}
-            onClick={() => setSelectedIcon(icon)}
-            className={`p-2 w-10 h-10 rounded-full border-2 ${
-              selectedIcon === icon ? "border-red-500" : "border-transparent"
+            onClick={() => setSelectedIcon(item.icon)}
+            className={`p-2 w-full flex items-center  ${
+              selectedIcon === item.icon ? "text-red-500" : ""
             }`}
           >
-            <img src={icon} alt="icon" />
+            <img
+              src={item.icon}
+              alt="icon"
+              className={`w-6 h-6  mr-2 ${
+                selectedIcon === item.icon
+                  ? "border-red-500 p-1"
+                  : "border-transparent"
+              } rounded-full border-2`}
+            />
+            <span>{item.name}</span>
           </button>
         ))}
       </div>

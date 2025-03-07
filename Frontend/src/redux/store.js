@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
-import mapReducer from "./mapSlice"; // Import the map slice
+import markerReducer from "./markerSlice";
+import drawingReducer from "./drawingSlice";
 
 const store = configureStore({
   reducer: {
-    map: mapReducer,
+    markers: markerReducer,
+    drawings: drawingReducer,
   },
 });
 
